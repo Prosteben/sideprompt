@@ -1,4 +1,4 @@
-# PromptVault – AI Prompt Manager (Chrome extension)
+# PromptNook – AI Prompt Manager (Chrome extension)
 
 Side-panel prompt library for ChatGPT, Claude, Gemini, Copilot, Perplexity & co. One-click insert, `{{variables}}`, folders, tags, search. Freemium: 15 prompts free, Pro (one-time payment via ExtensionPay/Stripe) unlocks unlimited prompts, sync and import.
 
@@ -34,7 +34,7 @@ Load unpacked for manual testing: `chrome://extensions` → Developer mode → *
 ## Release
 
 ```bash
-npm run release      # tests → store screenshots → dist/promptvault-<version>.zip
+npm run release      # tests → store screenshots → dist/promptnook-<version>.zip
 ```
 
 Then upload the zip in the Chrome Web Store Developer Dashboard and paste texts from `store/listing.md`.

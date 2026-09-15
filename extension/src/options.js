@@ -1,7 +1,7 @@
-/* PromptVault – options page */
+/* PromptNook – options page */
 (() => {
   const $ = (id) => document.getElementById(id);
-  const PRIVACY_URL = 'https://promptvault-ext.github.io/privacy'; // replace with the real hosted URL
+  const PRIVACY_URL = 'https://promptnook-ext.github.io/privacy'; // replace with the real hosted URL
   let toastTimer;
   function toast(msg, isError = false) {
     const t = $('toast');
@@ -55,7 +55,7 @@
     const blob = new Blob([json], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `promptvault-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `promptnook-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 2000);
   });

@@ -30,7 +30,7 @@ const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 280">
   <rect width="440" height="280" fill="#1a1740"/>
   <g transform="translate(40 76) scale(1)">${svg.replace(/<svg[^>]*>|<\/svg>/g, '')}</g>
-  <text x="190" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">PromptVault</text>
+  <text x="190" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">PromptNook</text>
   <text x="190" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#c9c6ff">Your AI prompts, one click away</text>
   <text x="190" y="186" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#8f8bd6">ChatGPT · Claude · Gemini · Copilot</text>
 </svg>`;

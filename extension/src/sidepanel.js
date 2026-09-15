@@ -1,4 +1,4 @@
-/* PromptVault – side panel UI */
+/* PromptNook – side panel UI */
 (() => {
   const $ = (id) => document.getElementById(id);
   const el = {

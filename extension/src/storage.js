@@ -1,4 +1,4 @@
-/* PromptVault – shared data layer (classic script, exposes global `PV`) */
+/* PromptNook – shared data layer (classic script, exposes global `PV`) */
 const PV = (() => {
   const KEY = 'pv_data';
   const PRO_KEY = 'pv_pro';
@@ -263,7 +263,7 @@ const PV = (() => {
   /* ---------- Import / Export ---------- */
   async function exportJSON() {
     const data = await load();
-    return JSON.stringify({ app: 'PromptVault', version: 1, exportedAt: new Date().toISOString(), prompts: data.prompts, folders: data.folders }, null, 2);
+    return JSON.stringify({ app: 'PromptNook', version: 1, exportedAt: new Date().toISOString(), prompts: data.prompts, folders: data.folders }, null, 2);
   }
 
   async function importJSON(text, { merge = true } = {}) {

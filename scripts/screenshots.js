@@ -28,7 +28,7 @@ const CHAT_MOCK = `<!doctype html><html><head><meta charset="utf-8"><style>
   <div class="msg ai"><b>AI</b><div class="bubble">Of course! Paste the code and tell me what to focus on – correctness, security, readability or performance.</div></div>
 </main>
 <footer><div class="box" id="composer" contenteditable="true">Review the following JavaScript as a senior engineer. Focus on: correctness, security, readability, and performance. For each issue give severity (high/medium/low), the line or snippet, and a fixed version.</div>
-<div class="hint">Prompt inserted by PromptVault ⚡ – press Enter to send</div></footer>
+<div class="hint">Prompt inserted by PromptNook ⚡ – press Enter to send</div></footer>
 </body></html>`;
 
 async function launch() {

@@ -1,4 +1,4 @@
-/* PromptVault – content script: inserts prompt text into the active AI chat composer */
+/* PromptNook – content script: inserts prompt text into the active AI chat composer */
 (() => {
   if (window.__pvContentLoaded) return;
   window.__pvContentLoaded = true;
