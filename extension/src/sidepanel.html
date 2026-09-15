@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PromptVault</title>
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body class="panel">
+  <header class="top">
+    <div class="brand">
+      <img src="../icons/icon32.png" alt="" width="20" height="20" />
+      <span>PromptVault</span>
+      <span id="proBadge" class="badge" hidden>PRO</span>
+    </div>
+    <div class="top-actions">
+      <button id="btnUpgrade" class="btn btn-pro btn-sm" title="Unlock unlimited prompts">Upgrade</button>
+      <button id="btnNew" class="btn btn-primary btn-sm" title="New prompt (N)">+ New</button>
+      <button id="btnSettings" class="icon-btn" title="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div id="viewList" class="view">
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Search prompts… (/ to focus, #tag)" autocomplete="off" />
+    </div>
+    <div id="folders" class="chips"></div>
+    <div id="quota" class="quota" hidden></div>
+    <div id="list" class="list"></div>
+    <div id="empty" class="empty" hidden>
+      <p><strong>No prompts here yet.</strong></p>
+      <p>Click <b>+ New</b>, or select text on any page → right-click → <i>Save selection to PromptVault</i>.</p>
+    </div>
+  </div>
+
+  <div id="viewEdit" class="view" hidden>
+    <form id="editForm" class="form" autocomplete="off">
+      <label>Title
+        <input id="fTitle" type="text" maxlength="200" required placeholder="e.g. Code review" />
+      </label>
+      <div class="row2">
+        <label>Folder
+          <input id="fFolder" type="text" list="folderList" maxlength="60" placeholder="Optional" />
+          <datalist id="folderList"></datalist>
+        </label>
+        <label>Tags
+          <input id="fTags" type="text" placeholder="comma, separated" />
+        </label>
+      </div>
+      <label>Prompt
+        <textarea id="fBody" rows="10" required placeholder="Write your prompt… Use {{variable}} or {{variable|default}} for fill-in fields. Built-ins: {{date}}, {{time}}."></textarea>
+      </label>
+      <div id="varPreview" class="hint"></div>
+      <label class="check"><input id="fPinned" type="checkbox" /> Pin to top</label>
+      <div class="form-actions">
+        <button type="button" id="btnDelete" class="btn btn-danger" hidden>Delete</button>
+        <span class="spacer"></span>
+        <button type="button" id="btnCancel" class="btn">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Variables dialog -->
+  <dialog id="dlgVars">
+    <form method="dialog" id="varsForm" class="form">
+      <h3 id="varsTitle">Fill in variables</h3>
+      <div id="varsFields"></div>
+      <div class="form-actions">
+        <button type="button" class="btn" data-close>Cancel</button>
+        <button type="submit" class="btn btn-primary" id="varsSubmit">Insert</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Upgrade dialog -->
+  <dialog id="dlgUpgrade">
+    <div class="form">
+      <h3>Go Pro – one‑time payment</h3>
+      <p id="upgradeReason" class="muted"></p>
+      <ul class="features">
+        <li>✅ Unlimited prompts &amp; folders</li>
+        <li>✅ Sync across all your Chrome browsers</li>
+        <li>✅ Import prompts from JSON</li>
+        <li>✅ Support an indie developer 💜</li>
+      </ul>
+      <div class="form-actions">
+        <button type="button" class="btn" data-close>Not now</button>
+        <button type="button" class="btn" id="btnLogin" title="Already paid? Sign in">I already paid</button>
+        <button type="button" class="btn btn-pro" id="btnBuy">Unlock Pro</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="../lib/ExtPay.js"></script>
+  <script src="storage.js"></script>
+  <script src="defaults.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

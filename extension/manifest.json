@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "PromptVault – AI Prompt Manager for ChatGPT, Claude & Gemini",
+  "short_name": "PromptVault",
+  "version": "1.0.0",
+  "description": "Save, organize and insert your best AI prompts in one click. Folders, tags, {{variables}}, search. Works with ChatGPT, Claude, Gemini & more.",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "sidePanel", "contextMenus", "clipboardWrite", "alarms"],
+  "background": { "service_worker": "src/background.js" },
+  "action": {
+    "default_title": "Open PromptVault (Alt+P)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": { "default_path": "src/sidepanel.html" },
+  "options_page": "src/options.html",
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+P" },
+      "description": "Open PromptVault side panel"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://aistudio.google.com/*",
+        "https://copilot.microsoft.com/*",
+        "https://www.perplexity.ai/*",
+        "https://grok.com/*",
+        "https://poe.com/*",
+        "https://chat.deepseek.com/*",
+        "https://chat.mistral.ai/*",
+        "https://www.bing.com/*",
+        "https://huggingface.co/*",
+        "https://chat.qwen.ai/*",
+        "https://kimi.com/*",
+        "https://www.meta.ai/*",
+        "https://notebooklm.google.com/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://extensionpay.com/*"],
+      "js": ["lib/ExtPay.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

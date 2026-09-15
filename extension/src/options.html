@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PromptVault – Settings</title>
+  <link rel="stylesheet" href="ui.css" />
+</head>
+<body class="page">
+  <div class="wrap">
+    <h1><img src="../icons/icon48.png" width="28" height="28" alt="" /> PromptVault Settings <span id="proBadge" class="badge" hidden>PRO</span></h1>
+    <p class="muted">Shortcut: <kbd>Alt</kbd> + <kbd>P</kbd> opens the side panel (change at <a href="#" id="lnkShortcuts">chrome://extensions/shortcuts</a>).</p>
+
+    <h2>Behaviour</h2>
+    <div class="section">
+      <div class="setting">
+        <div><div>Default click action</div><div class="desc">What happens when you click a prompt card.</div></div>
+        <select id="defaultAction">
+          <option value="insert">Insert into chat (fallback: copy)</option>
+          <option value="copy">Always copy to clipboard</option>
+        </select>
+      </div>
+      <div class="setting">
+        <div><div>Ask for {{variables}}</div><div class="desc">Show a fill-in dialog before inserting prompts with variables. Off = use defaults.</div></div>
+        <label class="switch"><input type="checkbox" id="askVariables" /><span></span></label>
+      </div>
+    </div>
+
+    <h2>Pro</h2>
+    <div class="section">
+      <div class="setting">
+        <div><div>Sync across devices <span class="badge">PRO</span></div><div class="desc">Keep prompts in Chrome sync storage so they follow your Google account.</div></div>
+        <label class="switch"><input type="checkbox" id="sync" /><span></span></label>
+      </div>
+      <div class="setting" id="proRow">
+        <div><div id="proStatus">Free plan</div><div class="desc" id="proDesc">One-time payment. Unlimited prompts, folders, sync and import.</div></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn" id="btnLogin">I already paid</button>
+          <button class="btn btn-pro" id="btnBuy">Unlock Pro</button>
+        </div>
+      </div>
+    </div>
+
+    <h2>Data</h2>
+    <div class="section">
+      <div class="setting">
+        <div><div>Export</div><div class="desc">Download all prompts as a JSON file (backup or move to another browser).</div></div>
+        <button class="btn" id="btnExport">Export JSON</button>
+      </div>
+      <div class="setting">
+        <div><div>Import <span class="badge">PRO</span></div><div class="desc">Merge prompts from a PromptVault JSON export (or any JSON array with title/body).</div></div>
+        <button class="btn" id="btnImport">Import JSON</button>
+        <input type="file" id="fileImport" class="file-input" accept="application/json,.json" />
+      </div>
+      <div class="setting">
+        <div><div>Restore starter prompts</div><div class="desc">Adds the built-in example prompts again (skips ones that already exist).</div></div>
+        <button class="btn" id="btnRestore">Restore</button>
+      </div>
+      <div class="setting">
+        <div><div>Delete all prompts</div><div class="desc">Removes every prompt and folder from this browser. Cannot be undone.</div></div>
+        <button class="btn btn-danger" id="btnWipe">Delete all</button>
+      </div>
+    </div>
+
+    <h2>About</h2>
+    <div class="section">
+      <div class="desc">PromptVault stores your prompts locally in your browser (and in Chrome sync if you enable it). No prompt data is ever sent to our servers. Payment is handled by ExtensionPay/Stripe. <a href="#" id="lnkPrivacy">Privacy policy</a> · <a href="#" id="lnkReview">Rate PromptVault ★</a></div>
+      <div class="desc">Version <span id="version"></span></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="../lib/ExtPay.js"></script>
+  <script src="storage.js"></script>
+  <script src="defaults.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
