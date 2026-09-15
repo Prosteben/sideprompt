@@ -1,4 +1,4 @@
-/* PromptNook – side panel UI */
+/* SidePrompt – side panel UI */
 (() => {
   const $ = (id) => document.getElementById(id);
   const el = {

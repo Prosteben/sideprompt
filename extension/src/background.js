@@ -1,4 +1,4 @@
-/* PromptNook – MV3 service worker */
+/* SidePrompt – MV3 service worker */
 importScripts('../lib/ExtPay.js', 'storage.js', 'defaults.js');
 
 const extpay = ExtPay(PV.EXTPAY_ID);
@@ -13,7 +13,7 @@ const MENU_ID = 'pv-save-selection';
 chrome.runtime.onInstalled.addListener(async (details) => {
   chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(() => {});
   chrome.contextMenus.removeAll(() => {
-    chrome.contextMenus.create({ id: MENU_ID, title: 'Save selection to PromptNook', contexts: ['selection'] });
+    chrome.contextMenus.create({ id: MENU_ID, title: 'Save selection to SidePrompt', contexts: ['selection'] });
   });
   await PV.seedDefaults();
   refreshProStatus();

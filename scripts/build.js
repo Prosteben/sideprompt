@@ -1,4 +1,4 @@
-// Packages ./extension into dist/promptnook-<version>.zip for Chrome Web Store upload.
+// Packages ./extension into dist/sideprompt-<version>.zip for Chrome Web Store upload.
 const { execFileSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
@@ -25,7 +25,7 @@ if (problems.length) {
 
 const dist = path.join(root, 'dist');
 fs.mkdirSync(dist, { recursive: true });
-const out = path.join(dist, `promptnook-${manifest.version}.zip`);
+const out = path.join(dist, `sideprompt-${manifest.version}.zip`);
 fs.rmSync(out, { force: true });
 
 // Use PowerShell's Compress-Archive on Windows, `zip` elsewhere. Zip the *contents* of extension/ (manifest at root).

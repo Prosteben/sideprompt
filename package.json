@@ -1,8 +1,8 @@
 {
-  "name": "promptnook",
+  "name": "sideprompt",
   "version": "1.0.0",
   "private": true,
-  "description": "PromptNook – AI prompt manager Chrome extension (ChatGPT, Claude, Gemini)",
+  "description": "SidePrompt – AI prompt manager Chrome extension (ChatGPT, Claude, Gemini)",
   "scripts": {
     "browser": "node scripts/browser-setup.js",
     "icons": "node scripts/gen-icons.js",

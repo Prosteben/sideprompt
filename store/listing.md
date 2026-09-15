@@ -1,9 +1,9 @@
-# Chrome Web Store listing – PromptNook
+# Chrome Web Store listing – SidePrompt
 
 Copy/paste these into the Developer Dashboard. Keep the keyword-rich title; store search is the only distribution channel.
 
 ## Name (max 75 chars)
-PromptNook – AI Prompt Manager for ChatGPT, Claude & Gemini
+SidePrompt – AI Prompt Manager for ChatGPT, Claude & Gemini
 
 ## Summary (max 132 chars)
 Save, organize and insert your best AI prompts in one click. Folders, tags, {{variables}}, search. ChatGPT, Claude, Gemini & more.
@@ -15,13 +15,13 @@ Productivity → Tools (or "Workflow & Planning")
 English
 
 ## Detailed description
-Stop retyping the same prompts. PromptNook keeps your best AI prompts in a side panel next to ChatGPT, Claude, Gemini, Copilot, Perplexity and other AI chats – and inserts them into the chat box with one click.
+Stop retyping the same prompts. SidePrompt keeps your best AI prompts in a side panel next to ChatGPT, Claude, Gemini, Copilot, Perplexity and other AI chats – and inserts them into the chat box with one click.
 
 ⚡ ONE-CLICK INSERT
 Click a prompt and it appears in the chat composer, ready to send. Works on chatgpt.com, claude.ai, gemini.google.com, copilot.microsoft.com, perplexity.ai, grok.com, poe.com, deepseek, mistral, and more. On any other site the prompt is copied to your clipboard instead.
 
 🧩 VARIABLES
-Write prompts like "Summarize {{text}} in {{language|English}}" and PromptNook asks you to fill in the blanks before inserting. Defaults, {{date}} and {{time}} built in.
+Write prompts like "Summarize {{text}} in {{language|English}}" and SidePrompt asks you to fill in the blanks before inserting. Defaults, {{date}} and {{time}} built in.
 
 🗂 ORGANIZE
 Folders, #tags, pins and instant search. Save any selected text from any web page as a new prompt from the right-click menu.
@@ -58,13 +58,13 @@ store/assets/promo-small-440x280.png
 - Permission justifications:
   - storage: save the user's prompts and settings locally / in Chrome sync.
   - sidePanel: the prompt library UI lives in Chrome's side panel.
-  - contextMenus: "Save selection to PromptNook" right-click item.
+  - contextMenus: "Save selection to SidePrompt" right-click item.
   - clipboardWrite: copy a prompt to the clipboard when the current page has no chat box.
   - alarms: re-check the Pro license once per day.
   - Host permissions (chat sites): content script that inserts the selected prompt into the chat composer on those sites only.
   - Host permission extensionpay.com: required by the ExtensionPay library to confirm a purchase.
 - Remote code: No.
-- Data usage: PromptNook does not collect or transmit user data. (Tick nothing in the data collection list. Payment data is handled by ExtensionPay/Stripe on their site.)
+- Data usage: SidePrompt does not collect or transmit user data. (Tick nothing in the data collection list. Payment data is handled by ExtensionPay/Stripe on their site.)
 - Certify all three disclosures.
 
 ## Privacy policy URL

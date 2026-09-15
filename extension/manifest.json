@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "PromptNook – AI Prompt Manager for ChatGPT, Claude & Gemini",
-  "short_name": "PromptNook",
+  "name": "SidePrompt – AI Prompt Manager for ChatGPT, Claude & Gemini",
+  "short_name": "SidePrompt",
   "version": "1.0.0",
   "description": "Save, organize and insert your best AI prompts in one click. Folders, tags, {{variables}}, search. Works with ChatGPT, Claude, Gemini & more.",
   "minimum_chrome_version": "116",
@@ -14,7 +14,7 @@
   "permissions": ["storage", "sidePanel", "contextMenus", "clipboardWrite", "alarms"],
   "background": { "service_worker": "src/background.js" },
   "action": {
-    "default_title": "Open PromptNook (Alt+P)",
+    "default_title": "Open SidePrompt (Alt+P)",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
@@ -27,7 +27,7 @@
   "commands": {
     "_execute_action": {
       "suggested_key": { "default": "Alt+P" },
-      "description": "Open PromptNook side panel"
+      "description": "Open SidePrompt side panel"
     }
   },
   "content_scripts": [
