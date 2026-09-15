@@ -2,7 +2,7 @@
 const PV = (() => {
   const KEY = 'pv_data';
   const PRO_KEY = 'pv_pro';
-  const EXTPAY_ID = 'promptvault'; // must match the id registered on extensionpay.com
+  const EXTPAY_ID = 'promptvault-drzymalla'; // must match the id registered on extensionpay.com
   const FREE_LIMITS = { prompts: 15, folders: 5 };
   const SYNC_PREFIX = 'sp_';
   const SYNC_META = 'sp_meta';
