@@ -1,4 +1,4 @@
-﻿/* SidePrompt â€“ options page */
+/* SidePrompt – options page */
 (() => {
   const $ = (id) => document.getElementById(id);
   const PRIVACY_URL = 'https://prosteben.github.io/sideprompt/';
@@ -19,7 +19,7 @@
     $('askVariables').checked = !!data.settings.askVariables;
     $('sync').checked = !!data.settings.sync && pro;
     $('proBadge').hidden = !pro;
-    $('proStatus').textContent = pro ? 'Pro plan â€“ thank you! đź’ś' : 'Free plan';
+    $('proStatus').textContent = pro ? 'Pro plan – thank you! 💜' : 'Free plan';
     $('proDesc').textContent = pro ? 'Everything is unlocked on this browser.' : 'One-time payment. Unlimited prompts, folders, sync and import.';
     $('btnBuy').hidden = pro;
     $('btnLogin').textContent = pro ? 'Manage license' : 'I already paid';
@@ -40,7 +40,7 @@
       try {
         const { merged } = await PV.syncPull();
         await PV.syncPush(await PV.load());
-        toast(`Sync enabled${merged ? ` â€“ merged ${merged} prompt(s) from other devices` : ''}`);
+        toast(`Sync enabled${merged ? ` – merged ${merged} prompt(s) from other devices` : ''}`);
       } catch (err) {
         toast('Sync failed: ' + err.message, true);
       }
@@ -89,7 +89,7 @@
     toAdd.forEach((p) => data.prompts.push(PV.newPrompt(p)));
     data.folders = [...new Set([...data.folders, ...toAdd.map((p) => p.folder).filter(Boolean)])];
     await PV.save(data);
-    toast(toAdd.length ? `Restored ${toAdd.length} prompt(s).` : missing.length ? 'Free limit reached â€“ nothing restored.' : 'All starter prompts already present.');
+    toast(toAdd.length ? `Restored ${toAdd.length} prompt(s).` : missing.length ? 'Free limit reached – nothing restored.' : 'All starter prompts already present.');
   });
 
   $('btnWipe').addEventListener('click', async () => {
