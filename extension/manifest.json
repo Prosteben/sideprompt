@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "SidePrompt – AI Prompt Manager for ChatGPT, Claude & Gemini",
   "short_name": "SidePrompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Save, organize and insert your best AI prompts in one click. Folders, tags, {{variables}}, search. ChatGPT, Claude, Gemini & more.",
   "minimum_chrome_version": "116",
   "icons": {

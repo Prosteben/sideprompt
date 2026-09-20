@@ -1,6 +1,6 @@
 {
   "name": "sideprompt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "SidePrompt – AI prompt manager Chrome extension (ChatGPT, Claude, Gemini)",
   "scripts": {

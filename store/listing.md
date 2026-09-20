@@ -72,5 +72,5 @@ store/assets/promo-small-440x280.png
 - Certify all three disclosures.
 
 ## Privacy policy URL
-https://prosteben.github.io/sideprompt/  (source: docs/index.html, served by GitHub Pages from the /docs folder of github.com/prosteben/sideprompt)
+https://prosteben.github.io/sideprompt/privacy-policy.html  (source: docs/privacy-policy.html; landing page is docs/index.html, served by GitHub Pages from the /docs folder of github.com/prosteben/sideprompt)
 

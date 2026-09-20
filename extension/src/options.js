@@ -1,7 +1,7 @@
 /* SidePrompt – options page */
 (() => {
   const $ = (id) => document.getElementById(id);
-  const PRIVACY_URL = 'https://prosteben.github.io/sideprompt/';
+  const PRIVACY_URL = 'https://prosteben.github.io/sideprompt/privacy-policy.html';
   let toastTimer;
   function toast(msg, isError = false) {
     const t = $('toast');
